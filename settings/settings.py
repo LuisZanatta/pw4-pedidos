@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '!=xb!ulo*1_lqthvm$f@dg!kd9@a)0*yevtt!svgyugc3g*+cj'
+SECRET_KEY = 'mt(*xhka0ms%d=8yon6ijwrm&^=i(*wt!7$s%js#draj%@shob'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -106,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
@@ -121,3 +121,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGING_URL = '/login/'
+LOGIN_REDIRECT_URL = '/home/'
+LOGOUT_URL = '/logout/'
+PASSWORD_RESET_TIMEOUT_DAYS = 1
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
