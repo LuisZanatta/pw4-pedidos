@@ -10,5 +10,15 @@
         {% block body %}
         
         {% endblock body %}
+
+        <script>
+            var messages = [
+            {% for message in messages %}
+            '{{ message.message }}',
+            {% endfor %}
+            ]
+
+            messages.map(mensagem => alert(mensagem))
+        </script>
     </body>
 </html>
