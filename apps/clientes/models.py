@@ -1,5 +1,5 @@
-from django.urls import reverse
 from django.db import models
+from django.urls import reverse
 
 class Cliente(models.Model):
     
@@ -24,7 +24,12 @@ class Cliente(models.Model):
 
     def __str__(self):
         return self.nome
-
-    def get_absolute_url(self):
-        return reverse("cliente__atualiza", kwargs={"pk": self.pk})
     
+    def get_absolute_url(self):
+	    return reverse("cliente__detail", kwargs={"pk":self.pk})
+ 
+    def get_update_url(self):
+	    return reverse("cliente__atualiza", kwargs={"pk":self.pk})
+ 
+    def get_delete_url(self):
+	    return reverse("cliente__delete", kwargs={"pk":self.pk})
